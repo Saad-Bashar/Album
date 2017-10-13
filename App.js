@@ -1,14 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
+import Header from './src/components/Header';
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <View style={styles.item} />
-        <View style={styles.item} />
-        <View style={styles.item} />
-      </View>
+      <Header text={'Album'} />
     );
   }
 }
@@ -18,8 +15,8 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     backgroundColor: '#fff',
-    alignItems: 'flex-start',
-    justifyContent: 'center',
+    alignItems: 'flex-end',
+    justifyContent: 'flex-start',
   },
   item: {
     backgroundColor: 'lightgoldenrodyellow',
