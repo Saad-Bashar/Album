@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Text, FlatList } from 'react-native';
+import { FlatList } from 'react-native';
+import AlbumDetails from './AlbumDetails';
 
 export default class AlbumList extends Component {
   constructor(props) {
@@ -18,11 +19,14 @@ export default class AlbumList extends Component {
       .then(albums => this.setState({ albums }));
   }
 
+  // extracting the key for flat list
   keyExtractor = (item) => item.title;
 
   renderItem({ item }) {
     return (
-      <Text>{item.title}</Text>
+      <AlbumDetails
+        album={item}
+      />
     );
   }
 
