@@ -20,15 +20,14 @@ const styles = StyleSheet.create({
 
 });
 
-const Header = (props) => {
-  const { textStyle, headerContainer } = styles;
-  const { text } = props;
-  return (
-    <View style={headerContainer}>
-      <Text style={textStyle}>{ text }</Text>
-    </View>
-  );
-};
-
-
-export default Header;
+export default class Header extends React.Component {
+  render() {
+    const { textStyle, headerContainer } = styles;
+    const { text } = this.props;
+    return (
+      <View style={headerContainer}>
+        <Text style={textStyle}>{ text }</Text>
+      </View>
+    );
+  }
+}
