@@ -14,9 +14,11 @@ export default class AlbumList extends Component {
      * Loads all the album data when the component
      * is mounted
      */
+    /* eslint-disable no-undef */
     fetch('https://rallycoding.herokuapp.com/api/music_albums')
       .then(response => response.json())
       .then(albums => this.setState({ albums }));
+    /* eslint-enable no-undef */
   }
 
   // extracting the key for flat list
@@ -34,7 +36,6 @@ export default class AlbumList extends Component {
     return (
       <FlatList
         keyExtractor={this.keyExtractor}
-        extraData={this.state}
         data={this.state.albums}
         renderItem={this.renderItem}
       />
