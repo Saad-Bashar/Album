@@ -1,3 +1,6 @@
-Album
+## Album
 
-Created this as a part of react-native course from Udemy with some little bit of tweaks and modifications. 
+Created this app as a part of react-native course from Udemy with some little bit of tweaks and modifications. [The Complete React Native and Redux Course](https://www.udemy.com/the-complete-react-native-and-redux-course/)
+
+
+![]({{site.baseurl}}//1y3eo4.gif)
